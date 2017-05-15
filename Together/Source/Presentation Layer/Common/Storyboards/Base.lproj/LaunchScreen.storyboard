@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SFUIDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kpl" translatesAutoresizingMaskIntoConstraints="NO" id="Fq5-Ba-Eoz">
+                                <rect key="frame" x="90" y="555" width="420" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fq5-Ba-Eoz" secondAttribute="height" multiplier="433:26" id="KDU-TZ-6hl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T O G E T H E R" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="77B-lY-yxm">
+                                <rect key="frame" x="210" y="402" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="77B-lY-yxm" secondAttribute="height" multiplier="60:7" id="i7W-UG-fx5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nrm-wm-LAL">
+                                <rect key="frame" x="210" y="206" width="180" height="188"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nrm-wm-LAL" secondAttribute="height" multiplier="256:267" id="1wJ-vj-la9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="77B-lY-yxm" firstAttribute="top" secondItem="nrm-wm-LAL" secondAttribute="bottom" constant="8" id="5Ut-bL-0O6"/>
+                            <constraint firstItem="nrm-wm-LAL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6oH-OZ-IHa"/>
+                            <constraint firstItem="nrm-wm-LAL" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="9HU-su-WBk"/>
+                            <constraint firstItem="77B-lY-yxm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9sY-Um-8em"/>
+                            <constraint firstItem="Fq5-Ba-Eoz" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="CNg-Ds-vcY"/>
+                            <constraint firstItem="77B-lY-yxm" firstAttribute="width" secondItem="nrm-wm-LAL" secondAttribute="width" id="RPu-bX-Hsi"/>
+                            <constraint firstItem="Fq5-Ba-Eoz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WhS-DZ-rr3"/>
+                            <constraint firstItem="nrm-wm-LAL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iyG-CE-KH6"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Fq5-Ba-Eoz" secondAttribute="bottom" constant="20" id="u9E-LM-s2D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kpl" width="433" height="26"/>
+        <image name="logo" width="256" height="267"/>
+    </resources>
+</document>
