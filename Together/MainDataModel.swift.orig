@@ -1,0 +1,84 @@
+//
+//  MainDataModel.swift
+//  Together
+//
+//  Created by Андрей Цай on 08.08.16.
+//  Copyright © 2016 Андрей Цай. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import GoogleMapsBase
+
+<<<<<<< HEAD
+struct EventData {
+    let uuid:String
+    let location: CLLocationCoordinate2D
+    let title: String
+    let description: String
+    let photoURLs: [String]
+    let time: NSDate
+    let creator: String
+    let participants: Array<String>?
+    let miniMap: UIImage?
+    let extraData: [String: AnyObject]
+=======
+// REVIEW: Struct names should start with a capital.
+// REVIEW: Consider using lets where possible (models should be immutable for the most part).
+// REVIEW: Use 'id' instead of 'uuid'
+struct eventData {
+    var uuid:String // REVIEW: Spacing
+    var location: CLLocationCoordinate2D
+    var title: String
+    var description: String
+    var photoURLs: [String]
+    var time: NSDate
+    var creator: String
+    var participants: Array<String>?
+    var miniMap: UIImage?
+    var extraData: [String: AnyObject]
+>>>>>>> 7aec297ab6ff032e1a6d9a343c2dcb97fda3e529
+}
+
+struct EventGroupData {
+    let uuid: String
+    let name: String
+    let events: [EventData]
+}
+
+struct InterestData {
+<<<<<<< HEAD
+    let uuid: String
+    let title:String
+=======
+    var uuid: String
+    var title:String // REVIEW: Spacing
+>>>>>>> 7aec297ab6ff032e1a6d9a343c2dcb97fda3e529
+}
+
+struct MessageData{
+    let uuid: String
+    let from: String
+    let to: String
+    let time: NSDate
+    let text: String
+}
+
+struct UserData {
+<<<<<<< HEAD
+    let uuid: String
+    let name: String
+    let familyName: String
+    let email: String
+    let photoUUID: String
+    let sex: Bool
+}
+=======
+    var uuid: String
+    var name: String
+    var familyName: String
+    var email: String
+    var photoUUID: String
+    var sex: Bool
+}
+>>>>>>> 7aec297ab6ff032e1a6d9a343c2dcb97fda3e529

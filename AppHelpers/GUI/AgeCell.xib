@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AgeCell" customModule="Together" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVs-u5-XF3" customClass="TTRangeSlider">
+                        <rect key="frame" x="8" y="66.5" width="304" height="45.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                <real key="value" value="70"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinimum">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaximum">
+                                <real key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minDistance">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-g9-8aS">
+                        <rect key="frame" x="8" y="7.5" width="30" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZ9-BE-l78">
+                        <rect key="frame" x="8" y="47.5" width="304" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="52O-cI-Q9h"/>
+                        </constraints>
+                    </view>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cA7-Be-8n0">
+                        <rect key="frame" x="263" y="7.5" width="51" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="W0K-at-SMS"/>
+                        </constraints>
+                        <connections>
+                            <action selector="ageEnabledChangedAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="RsQ-BU-eyd"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xVs-u5-XF3" firstAttribute="top" secondItem="uZ9-BE-l78" secondAttribute="bottom" constant="18" id="N9b-NM-n4I"/>
+                    <constraint firstItem="uZ9-BE-l78" firstAttribute="leading" secondItem="eKR-g9-8aS" secondAttribute="trailing" constant="-30" id="NBE-8e-ND1"/>
+                    <constraint firstAttribute="topMargin" secondItem="cA7-Be-8n0" secondAttribute="top" id="TfQ-HR-tfh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xVs-u5-XF3" secondAttribute="bottom" constant="-0.5" id="VCh-9A-uEV"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="xVs-u5-XF3" secondAttribute="leading" id="ew0-DL-B10"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="eKR-g9-8aS" secondAttribute="leading" id="lvT-or-uoF"/>
+                    <constraint firstItem="eKR-g9-8aS" firstAttribute="centerY" secondItem="cA7-Be-8n0" secondAttribute="centerY" id="n1Q-dC-cOr"/>
+                    <constraint firstAttribute="topMargin" secondItem="eKR-g9-8aS" secondAttribute="top" id="rjh-B4-y7Q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xVs-u5-XF3" secondAttribute="trailing" id="tEE-AL-VmO"/>
+                    <constraint firstItem="uZ9-BE-l78" firstAttribute="top" secondItem="eKR-g9-8aS" secondAttribute="bottom" constant="8" id="yKa-Dw-egq"/>
+                    <constraint firstItem="eKR-g9-8aS" firstAttribute="height" secondItem="cA7-Be-8n0" secondAttribute="height" id="yam-v1-VLS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uZ9-BE-l78" secondAttribute="trailing" id="z99-cA-fbV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cA7-Be-8n0" secondAttribute="trailing" id="zPx-xh-K5T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ageEnableSwitch" destination="cA7-Be-8n0" id="nHB-uC-hmR"/>
+                <outlet property="ageRangeSlider" destination="xVs-u5-XF3" id="osa-le-b0B"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

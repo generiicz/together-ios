@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SFUIDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lvC-4j-cNs" customClass="MessagesCell" customModule="Together" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lvC-4j-cNs" id="Mlw-2W-TOE">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7s-bb-Hd3" customClass="RoundImage" customModule="Together" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="83" height="83"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Q7s-bb-Hd3" secondAttribute="height" multiplier="1:1" id="E9Z-zT-AxW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpf-4G-TNz">
+                        <rect key="frame" x="99" y="19" width="84" height="21"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                        <color key="textColor" red="0.33725490196078434" green="0.3529411764705882" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:01" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJG-d4-Xke">
+                        <rect key="frame" x="274" y="19" width="38" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4NE-sR-SNI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                        <color key="textColor" red="0.50980392156862742" green="0.53725490196078429" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You:" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTK-ne-zCk">
+                        <rect key="frame" x="99" y="59" width="32" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2Ze-lQ-rgL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                        <color key="textColor" red="0.50980392156862742" green="0.53725490196078429" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-K0-rsg">
+                        <rect key="frame" x="139" y="59" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="h12-BJ-BFj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lpf-4G-TNz" firstAttribute="top" secondItem="Mlw-2W-TOE" secondAttribute="topMargin" constant="11" id="3bz-l6-uaU"/>
+                    <constraint firstItem="b0C-K0-rsg" firstAttribute="centerY" secondItem="WTK-ne-zCk" secondAttribute="centerY" id="4HK-l7-g6d"/>
+                    <constraint firstItem="PJG-d4-Xke" firstAttribute="centerY" secondItem="lpf-4G-TNz" secondAttribute="centerY" id="DId-Yv-dmr"/>
+                    <constraint firstItem="WTK-ne-zCk" firstAttribute="leading" secondItem="Q7s-bb-Hd3" secondAttribute="trailing" constant="8" id="HtJ-F2-CHk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PJG-d4-Xke" secondAttribute="trailing" id="SsP-gb-ehP"/>
+                    <constraint firstItem="b0C-K0-rsg" firstAttribute="leading" secondItem="WTK-ne-zCk" secondAttribute="trailing" constant="8" id="ZES-DY-WhL"/>
+                    <constraint firstAttribute="topMargin" secondItem="Q7s-bb-Hd3" secondAttribute="top" id="car-6J-LjL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WTK-ne-zCk" secondAttribute="bottom" constant="11" id="ePk-b7-e54"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Q7s-bb-Hd3" secondAttribute="bottom" id="fYf-X1-zmQ"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Q7s-bb-Hd3" secondAttribute="leading" id="mce-Jb-B1u"/>
+                    <constraint firstItem="lpf-4G-TNz" firstAttribute="leading" secondItem="Q7s-bb-Hd3" secondAttribute="trailing" constant="8" id="onU-Rt-wyl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="AuthorLabel" destination="WTK-ne-zCk" id="S80-38-ywd"/>
+                <outlet property="LastMessageLabel" destination="b0C-K0-rsg" id="bSI-s1-3Tn"/>
+                <outlet property="TimeLabel" destination="PJG-d4-Xke" id="jMn-8i-QKG"/>
+                <outlet property="UserNameLabel" destination="lpf-4G-TNz" id="9Qg-Pd-nbR"/>
+                <outlet property="UserPhoto" destination="Q7s-bb-Hd3" id="uGT-8p-5Pa"/>
+            </connections>
+            <point key="canvasLocation" x="194" y="143"/>
+        </tableViewCell>
+    </objects>
+</document>

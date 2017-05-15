@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="ButtonCell" customModule="Together" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cac-W1-Xbq" customClass="PrettyButton" customModule="Together" customModuleProvider="target">
+                        <rect key="frame" x="24" y="12" width="272" height="55.5"/>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="Button">
+                                    <attributes>
+                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <font key="NSFont" size="18" name="SFUIDisplay-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </state>
+                        <connections>
+                            <action selector="cellButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nVr-Op-vFw"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cac-W1-Xbq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="51c-mA-Wt9"/>
+                    <constraint firstItem="cac-W1-Xbq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="fAo-pm-HFx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cac-W1-Xbq" secondAttribute="trailing" constant="16" id="kNq-pq-Vi9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cac-W1-Xbq" secondAttribute="bottom" constant="4" id="wrT-LU-Zvx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellButton" destination="cac-W1-Xbq" id="DTx-fN-yiW"/>
+            </connections>
+            <point key="canvasLocation" x="263" y="7"/>
+        </tableViewCell>
+    </objects>
+</document>

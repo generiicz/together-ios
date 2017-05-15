@@ -1,0 +1,90 @@
+//
+//  MessagesTableViewController.swift
+//  Together
+//
+//  Created by Андрей Цай on 12.08.16.
+//  Copyright © 2016 Андрей Цай. All rights reserved.
+//
+
+import UIKit
+
+class MessagesTableViewController: UITableViewController, BackNavigation, MainTabChild {
+    
+<<<<<<< HEAD
+    weak var MainNavController: UINavigationController!
+    var messages: [MessageData] = []
+=======
+    weak var MainNavController: UINavigationController! // REVIEW: property names should not start with a capital
+    var messages: [messageData] = []
+>>>>>>> 7aec297ab6ff032e1a6d9a343c2dcb97fda3e529
+    var loaded: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makePretty()
+        tableView.registerNib(UINib(nibName: "MessagesCell", bundle: nil), forCellReuseIdentifier: "MessagesCell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refreshData()
+    }
+    
+    func loadTestData () {
+        BackEndOverlay.getLastMessagesForUser("test"){ (result) in
+            switch result {
+            case .success(let messages):
+                self.messages = messages
+                self.tableView.reloadData()
+                //self.loaded = true
+            case .failure(let error):
+                print("Error loading messages for user \(error)")
+            }
+        }
+    }
+    
+    func reloadData() {
+        self.loaded = false
+        self.refreshData()
+    }
+    
+    func refreshData(){
+        if !self.loaded {
+            self.loadTestData()
+            //self.loaded = true
+        } else {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func makePretty(){
+        self.navigationController?.navigationBarHidden = false
+        self.clearsSelectionOnViewWillAppear = false
+    }
+
+    // MARK: - Table view data source
+    // REVIEW: Put these methods in a separate extension
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MessagesCell", forIndexPath: indexPath) as! MessagesCell
+        cell.loadData(messages[indexPath.row])
+
+        return cell
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let data = self.messages[indexPath.row]
+        print(data)
+    }
+
+}

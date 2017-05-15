@@ -1,0 +1,195 @@
+//
+//  ProfileMenuTableViewController.swift
+//  Together
+//
+//  Created by Андрей Цай on 12.08.16.
+//  Copyright © 2016 Андрей Цай. All rights reserved.
+//
+
+import UIKit
+
+class SettingsMenuViewController: UIViewController {
+    
+    private let menuDataSource = UniTableViewDataSource()
+    private let itemHeight: CGFloat? = nil // = 36
+    private var totalMenuItems: Int!
+
+    @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var editUserProfileButton: PrettyButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var shareButton: UIButton!
+    
+    @IBAction func editUserProfileAction(sender: UIButton) {
+    }
+    
+    @IBAction func shareWithFriendsAction(sender: UIButton) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makePretty()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        menuDataSource.defaultRowHeight = round(tableView.frame.height / CGFloat(totalMenuItems))
+        self.navigationController?.navigationBarHidden = true
+        //NSNotificationCenter.defaultCenter().postNotificationName(TogetherNotificationTypes.summonMainTabShadow, object: self)
+    }
+    /*
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName(TogetherNotificationTypes.removeMainTabShadow, object: self)
+    }
+ 
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName(TogetherNotificationTypes.removeMainTabShadow, object: self)
+    }*/
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        menuDataSource.defaultRowHeight = round(tableView.frame.height / CGFloat(totalMenuItems))
+        tableView.reloadData()
+        tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: totalMenuItems - 1, inSection: 0), atScrollPosition: .Bottom, animated: false)
+    }
+    
+<<<<<<< HEAD
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let heartInsetH = shareButton.frame.height*0.3
+        let subWidth = shareButton.frame.width - shareButton.frame.height + heartInsetH*2
+        let heartInsetRight = subWidth*0.9
+        let heartInsetLeft = subWidth*0.1
+        
+        shareButton.imageEdgeInsets = UIEdgeInsetsMake(
+            heartInsetH,
+            heartInsetLeft,
+            heartInsetH,
+            heartInsetRight
+        )
+        shareButton.titleEdgeInsets = UIEdgeInsetsMake(
+            0,
+            -shareButton.frame.width*0.3,
+            0,
+            0)
+        
+        //var heartFrame = shareButton.imageView?.frame
+        //let heartNewSize = (heartFrame?.height)! - heartInsetH * 2
+        //heartFrame?.size.height = heartNewSize
+        //heartFrame?.size.width = heartNewSize
+        //shareButton.imageView?.contentScaleFactor = 0.5
+    }
+    
+    private func setupCells() -> Int{
+=======
+    private func setupCells() -> Int {
+>>>>>>> 7aec297ab6ff032e1a6d9a343c2dcb97fda3e529
+        let titleColor = UIColor.grayColor(131)
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "My Friends",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsMyFriends"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Events History",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsEventsHistory"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Interests",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsInterests"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Notifications",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsNotifications"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Settings",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsSettings"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Help",
+                "TitleColor": titleColor,
+                "TintColor": titleColor,
+                "ImageName": "SettingsHelp"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.addCell(
+            "SettingsMenuCell",
+            nibName: "SettingsMenuCell",
+            rowHeight: itemHeight,
+            cellData: [
+                "Title": "Add Event",
+                "TitleColor": TogetherColors.RedMain,
+                "TintColor": TogetherColors.RedMain,
+                "ImageName": "SettingsAddEvent"
+            ],
+            selectedClosure: self.selectedMyFriends
+        )
+        menuDataSource.generateCells(tableView)
+        return 7 // REVIEW: Is there a way to get it from menuDataSource instead of hard-coding it?
+    }
+    
+    private func selectedMyFriends(index: Int, cData: [String: AnyObject]?) {
+        print("MyFriends Selected!")
+        print(index)
+        print(cData)
+    }
+    
+    private func makePretty() {
+        userPhoto.image = UIImage(named: "Das-1")
+        userNameLabel.text = "John Smith"
+        menuDataSource.connectToTableView(tableView)
+        totalMenuItems = setupCells()
+        editUserProfileButton.pretty = true
+        editUserProfileButton.loadStatesProfile(TogetherPrettyButtonProfiles.RedUnderlinedButton)
+        shareButton.setImage(GUItools.iconicImage("SettingsShareWithFriends"), forState: .Normal)
+    }
+
+}

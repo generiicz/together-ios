@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeEventDetailsViewController" customModule="Together" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="ek7-RB-Mpp" id="Beb-Ys-2aO"/>
+                <outlet property="togetherTabBar" destination="QDA-MY-vma" id="oH2-OT-ELU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="vhd-rA-i0R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ek7-RB-Mpp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="separatorColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDA-MY-vma" customClass="TogetherTabBar" customModule="Together" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="XYj-yM-oyh"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem systemItem="favorites" id="cYL-QZ-aan"/>
+                        <tabBarItem systemItem="more" id="hNg-c1-Vwf"/>
+                    </items>
+                </tabBar>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QDA-MY-vma" secondAttribute="bottom" id="2Ip-KF-Xms"/>
+                <constraint firstAttribute="trailing" secondItem="QDA-MY-vma" secondAttribute="trailing" id="7Ai-nD-AHh"/>
+                <constraint firstItem="ek7-RB-Mpp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R18-zW-855"/>
+                <constraint firstItem="QDA-MY-vma" firstAttribute="top" secondItem="ek7-RB-Mpp" secondAttribute="bottom" id="U9t-2c-8dg"/>
+                <constraint firstItem="ek7-RB-Mpp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hjV-we-7ei"/>
+                <constraint firstAttribute="trailing" secondItem="ek7-RB-Mpp" secondAttribute="trailing" id="qSd-BE-q6R"/>
+                <constraint firstItem="QDA-MY-vma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ucc-80-lmK"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

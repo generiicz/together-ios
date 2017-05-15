@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HEDParticipantsCollectionViewCell" customModule="Together" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNY-pj-URC">
+                        <rect key="frame" x="8" y="103.5" width="133" height="63.5"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.35294117650000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-gd-FGs" customClass="RoundImage" customModule="Together" customModuleProvider="target">
+                        <rect key="frame" x="31" y="8" width="87.5" height="87.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="JBy-gd-FGs" secondAttribute="height" multiplier="1:1" id="kuA-7s-f9b"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rNY-pj-URC" firstAttribute="top" secondItem="JBy-gd-FGs" secondAttribute="bottom" constant="8" id="3SQ-Ba-qLZ"/>
+                <constraint firstAttribute="trailing" secondItem="rNY-pj-URC" secondAttribute="trailing" constant="8" id="EFX-pc-bHo"/>
+                <constraint firstItem="rNY-pj-URC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="LEJ-6z-CP8"/>
+                <constraint firstItem="JBy-gd-FGs" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" id="RtF-JP-8yY"/>
+                <constraint firstAttribute="bottom" secondItem="rNY-pj-URC" secondAttribute="bottom" constant="8" id="Wnj-Co-uFs"/>
+                <constraint firstItem="JBy-gd-FGs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ygd-uv-LaU"/>
+                <constraint firstItem="JBy-gd-FGs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="sGE-s3-3PD"/>
+            </constraints>
+            <size key="customSize" width="124" height="147"/>
+            <connections>
+                <outlet property="participantName" destination="rNY-pj-URC" id="92O-jc-Fxy"/>
+                <outlet property="participantPhoto" destination="JBy-gd-FGs" id="1Sx-t3-eHk"/>
+            </connections>
+            <point key="canvasLocation" x="100.5" y="107.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
